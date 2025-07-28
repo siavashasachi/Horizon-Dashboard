@@ -1,5 +1,4 @@
 import loginBg from '../../assets/images/backgrounds/Login_bg.png'; 
-import './Login.css'
 function Login() {
   return (
     <div className="flex  h-screen justify-center overflow-y-auto">
@@ -8,7 +7,7 @@ function Login() {
         <div className="w-full max-w-md px-4">
           <h2 className="text-3xl font-bold mb-2 text-primary">Sign In</h2>
           <p className="mb-2 text-secondary-gray">Enter your email and password to sign in!</p>
-          <button className="w-full flex items-center justify-center gap-2 border-transparent bg-google-btn rounded-md py-2 mb-4 ">
+          <button className="w-full flex items-center justify-center gap-2 border-transparent bg-google-btn rounded-primary py-2 mb-4 ">
             <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" className="w-5 h-5" />
             Sign in with Google
           </button>
@@ -22,12 +21,12 @@ function Login() {
           <form>
             <div className="mb-4">
               <label className="block text-sm font-medium">Email</label>
-              <input type="email" placeholder="mail@simmmple.com" className="w-full mt-1 px-4 py-2 border border-light rounded-md" />
+              <input type="email" placeholder="mail@simmmple.com" className="w-full mt-1 px-4 py-2 border border-light rounded-primary" />
             </div>
 
             <div className="mb-4">
               <label className="block text-sm font-medium">Password</label>
-              <input type="password" placeholder="Min. 8 characters" className="w-full mt-1 px-4 py-2 border border-light rounded-md" />
+              <input type="password" placeholder="Min. 8 characters" className="w-full mt-1 px-4 py-2 border border-light rounded-primary" />
             </div>
 
             <div className="flex justify-between items-center mb-4">
@@ -38,7 +37,7 @@ function Login() {
               <a href="#" className="text-sm text-blue-primary font-medium">Forgot password?</a>
             </div>
 
-            <button type="submit" className="w-full bg-blue-primary  text-white py-2 rounded-md">
+            <button type="submit" className="w-full bg-blue-primary  text-white py-2 rounded-primary">
               Sign In
             </button>
           </form>
