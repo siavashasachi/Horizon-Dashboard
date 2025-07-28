@@ -1,6 +1,8 @@
+
 import loginBg from '../../assets/images/backgrounds/Login_bg.png'; 
 import logoImg from '../../assets/images/icons/Horizon_icon.png'; 
-import logoName from '../../assets/images/icons/Horizon_Name_Icon.png'
+import logoName from '../../assets/images/icons/Horizon_Name_Icon.png';
+
 function Login() {
   return (
     <div className="flex  h-screen justify-center overflow-y-auto">
@@ -65,7 +67,6 @@ function Login() {
         </div>
         </div>
       </div>
-
     </div>
   );
 }

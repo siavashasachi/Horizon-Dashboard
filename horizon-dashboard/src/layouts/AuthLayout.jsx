@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Footer from '@components/Footer';
-
+import DarkMoodeToggle from '../components/DarkMoodeToggle';
 function AuthLayout() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -8,7 +8,8 @@ function AuthLayout() {
     <Outlet />
   </main>
   <Footer />
-</div>
+  <DarkMoodeToggle/>
+    </div>
 
   );
 }
