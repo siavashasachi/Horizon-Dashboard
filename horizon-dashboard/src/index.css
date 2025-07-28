@@ -14,7 +14,7 @@
   --color-blue-primary: #4318FF;
   --color-google-btn: #F4F7FE;
   --color-light: #E0E5F2;
-  
+  --color-white-20:rgba(255, 255, 255, 0.2);
   /* border-radius */
   --radius-primary: 12px;
   --bottom-left-radius-login:30%;

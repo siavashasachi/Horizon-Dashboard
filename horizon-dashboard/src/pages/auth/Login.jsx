@@ -1,4 +1,6 @@
 import loginBg from '../../assets/images/backgrounds/Login_bg.png'; 
+import logoImg from '../../assets/images/icons/Horizon_icon.png'; 
+import logoName from '../../assets/images/icons/Horizon_Name_Icon.png'
 function Login() {
   return (
     <div className="flex  h-screen justify-center overflow-y-auto">
@@ -47,9 +49,23 @@ function Login() {
           </p>
         </div>
       </div>
-      <div className="w-full md:w-1/2 flex flex-col">
-        <img className='h-screen rounded-bl-login' src={loginBg} alt="Login Background" />
+      <div
+        className="w-full md:w-1/2 flex flex-col justify-center items-center bg-cover bg-center rounded-bl-login"
+        style={{ backgroundImage: `url(${loginBg})` }}
+      >
+        <div className='flex items-center justify-center flex-col gap-14'>
+          <div className="login-logo-section flex flex-col items-center gap-4 h-full justify-center">
+          <img src={logoImg} alt="Logo Icon"  className='w-50' />
+          <img src={logoName} alt="Logo Icon" className='w-50' />
+        </div>
+        <div className='border  border-white-20 rounded-primary py-4 px-16 text-center text-white'>
+            <span className='text-xs '><a href='#'>Learn more about Horizon UI on</a></span> 
+            <h4><a href='#' className='font-bold text-2xl'>Horizon.com</a></h4>
+          
+        </div>
+        </div>
       </div>
+
     </div>
   );
 }
