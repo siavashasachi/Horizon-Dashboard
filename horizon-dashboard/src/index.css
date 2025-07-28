@@ -8,10 +8,16 @@
 
 
 @theme {
-  --color-primary:#2B3674;
-  --color-secondary-gray:#A3AED0;
-  --color-blue-primary:#4318FF;
-  --color-google-btn:#F4F7FE;
-  --color-light:#E0E5F2;
-  --radius-md:12px;
+  --color-primary: #2B3674;
+  --color-secondary-gray: #A3AED0;
+  --color-blue-primary: #4318FF;
+  --color-google-btn: #F4F7FE;
+  --color-light: #E0E5F2;
+  --radius-md: 12px;
 }
+
+/*  Dark Mode Overrides */
+.dark {
+  --color-secondary-gray: #FFF;
+}
+
