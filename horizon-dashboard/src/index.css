@@ -3,10 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
-  --footer-text: #A3AED0;
-}
 
-.dark {
-  --footer-text: #fff;
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+  --color-footer:#A3AED0;
+  --color-primary-blue:#4318FF;
 }
