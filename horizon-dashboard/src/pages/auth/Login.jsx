@@ -1,6 +1,8 @@
+import loginBg from '../../assets/images/backgrounds/Login_bg.png'; 
+import './Login.css'
 function Login() {
   return (
-    <div className="flex flex-col h-screen justify-center overflow-y-auto">
+    <div className="flex  h-screen justify-center overflow-y-auto">
       {/* Left Side - Login Form */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-8">
         <div className="w-full max-w-md px-4">
@@ -46,7 +48,9 @@ function Login() {
           </p>
         </div>
       </div>
-
+      <div className="w-full md:w-1/2 flex flex-col">
+        <img className='h-screen rounded-bl-login' src={loginBg} alt="Login Background" />
+      </div>
     </div>
   );
 }

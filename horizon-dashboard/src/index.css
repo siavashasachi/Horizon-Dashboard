@@ -8,11 +8,14 @@
 
 
 @theme {
+  /* colors */
   --color-primary: #2B3674;
   --color-secondary-gray: #A3AED0;
   --color-blue-primary: #4318FF;
   --color-google-btn: #F4F7FE;
   --color-light: #E0E5F2;
+  
+  /* border-radius */
   --radius-md: 12px;
 }
 
