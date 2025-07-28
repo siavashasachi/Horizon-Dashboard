@@ -3,3 +3,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --footer-text: #A3AED0;
+}
+
+.dark {
+  --footer-text: #fff;
+}

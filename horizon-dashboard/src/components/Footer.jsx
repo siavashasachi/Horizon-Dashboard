@@ -1,14 +1,20 @@
 import { useLocation } from 'react-router-dom';
-const location=useLocation();
-const isLogin = location.pathname === '/login';
-function Footer() {
-  return (
 
-    <footer className={isLogin ? 'w-full px-4 py-4 flex flex-col md:flex-row items-center justify-around text-sm text-gray-500' : 'w-full px-4 py-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500'}>
+function Footer() {
+  const location = useLocation(); // ✅ Move this INSIDE the component
+  const isLogin = location.pathname === '/login';
+
+  return (
+    // it is wrritn for change classes on footerpage
+    <footer
+      className={`w-full px-4 py-4 flex flex-col md:flex-row items-center text-sm text-[var(--footer-text)] ${
+    isLogin ? 'justify-around' : 'justify-between'
+  }`}
+    >
       <span>
         © {new Date().getFullYear()} Horizon UI. All Rights Reserved. Made with love by Simmmple!
       </span>
-      <div className= {isLogin ? "flex gap-4 mt-2 md:mt-0 text-white" : "flex gap-4 mt-2 md:mt-0"}>
+      <div className={`flex gap-4 mt-2 md:mt-0 ${isLogin ? 'text-white' : 'text-footer-text'}`}>
         <a href="#" className="hover:underline">Marketplace</a>
         <a href="#" className="hover:underline">License</a>
         <a href="#" className="hover:underline">Terms of Use</a>
@@ -19,3 +25,4 @@ function Footer() {
 }
 
 export default Footer;
+
