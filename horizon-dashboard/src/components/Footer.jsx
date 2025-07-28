@@ -6,13 +6,13 @@ function Footer() {
 
   return (
     <footer
-      className={`w-full px-4 py-4 flex flex-col md:flex-row items-center text-footer dark:text-white
+      className={` absolute bottom-0 w-full px-4 py-4 flex flex-col md:flex-row items-center text-secondary-gray 
         ${isLogin ? 'justify-around' : 'justify-between'}`}
     >
       <span>
         © {new Date().getFullYear()} Horizon UI. All Rights Reserved. Made with love by Simmmple!
       </span>
-      <div className={`flex gap-4 mt-2 md:mt-0 dark:text-white ${isLogin ? 'text-white' : 'text-footer'}`}>
+      <div className={`flex gap-4 mt-2 md:mt-0  ${isLogin ? 'text-white' : 'text-secondary-gray'}`}>
         <a href="#" className="hover:underline">Marketplace</a>
         <a href="#" className="hover:underline">License</a>
         <a href="#" className="hover:underline">Terms of Use</a>
