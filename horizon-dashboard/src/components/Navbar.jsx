@@ -14,7 +14,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="h-screen w-64 bg-white shadow-sm flex flex-col ">
+    <nav className="h-[1152px] w-64 bg-white shadow-sm flex flex-col ">
       
         {/* Logo */}
       <div className="flex items-center justify-center text-3xl border-b border-light px-6 py-10">
@@ -24,7 +24,7 @@ function Navbar() {
         </h2>
       </div>
 
-     <div className="flex flex-col justify-between py-10">
+     <div className="flex flex-col justify-between gap-10 py-10 h-full">
        {/* Nav Items */}
       <div className=" flex flex-col gap-6 text-sm font-medium  pl-6">
         {navItems.map(({ to, label, icon }) => (
