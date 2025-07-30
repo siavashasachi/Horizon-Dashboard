@@ -25,34 +25,39 @@ function Navbar() {
       {/* Nav Items */}
       <div className="mt-12 flex flex-col gap-6 text-sm font-medium pl-6">
         {navItems.map(({ to, label, icon }) => (
-          <NavLink
-            key={to}
-            to={to}
-          >
+          <NavLink key={to} to={to}>
             {({ isActive }) => {
               const isHovered = hovered !== null;
               const isThisHovered = hovered === to;
 
-              const iconClass =
+              const iconColor =
                 isActive && (!isHovered || isThisHovered)
                   ? "text-blue-primary"
-                  : "text-secondary-gray group-hover:text-blue-primary";
+                  : "text-secondary-gray";
 
-              const labelClass =
+              const labelColor =
                 isActive && (!isHovered || isThisHovered)
                   ? "text-primary"
-                  : "text-secondary-gray group-hover:text-primary";
+                  : "text-secondary-gray";
 
               return (
                 <div
-                  className="group flex items-center gap-3 px-2 py-1 rounded-md transition cursor-pointer"
+                  className="group flex items-center gap-3 px-2 py-1 rounded-md cursor-pointer transition-colors duration-300 ease-in-out"
                   onMouseEnter={() => setHovered(to)}
                   onMouseLeave={() => setHovered(null)}
                 >
-                  <span className={`material-symbols-outlined nav-item-icon text-lg transition ${iconClass}`}>
+                  <span
+                    className={`material-symbols-outlined nav-item-icon text-lg transition-colors duration-300 ease-in-out ${
+                      isThisHovered ? "text-blue-primary" : iconColor
+                    } group-hover:text-blue-primary`}
+                  >
                     {icon}
                   </span>
-                  <span className={`nav-item-info text-sm font-medium transition ${labelClass}`}>
+                  <span
+                    className={`nav-item-info text-sm font-medium transition-colors duration-300 ease-in-out ${
+                      isThisHovered ? "text-primary" : labelColor
+                    } group-hover:text-primary`}
+                  >
                     {label}
                   </span>
                 </div>
@@ -66,4 +71,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
