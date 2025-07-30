@@ -1,6 +1,17 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  const [hovered, setHovered] = useState(null);
+
+  const navItems = [
+    { to: "/", label: "Dashboard", icon: "home" },
+    { to: "/marketplace", label: "NFT Market Place", icon: "shopping_cart" },
+    { to: "/tables", label: "Tables", icon: "grouped_bar_chart" },
+    { to: "/kanban", label: "Kanban", icon: "dashboard" },
+    { to: "/profile", label: "Profile", icon: "person" },
+  ];
+
   return (
     <nav className="h-screen w-64 bg-white shadow-sm flex flex-col">
       {/* Logo */}
@@ -13,36 +24,40 @@ function Navbar() {
 
       {/* Nav Items */}
       <div className="mt-12 flex flex-col gap-6 text-sm font-medium pl-6">
-        {[
-          { to: "/", label: "Dashboard", icon: "home" },
-          { to: "/marketplace", label: "NFT Market Place", icon: "shopping_cart" },
-          { to: "/tables", label: "Tables", icon: "grouped_bar_chart" },
-          { to: "/kanban", label: "Kanban", icon: "dashboard" },
-          { to: "/profile", label: "Profile", icon: "person" },
-        ].map(({ to, label, icon }) => (
+        {navItems.map(({ to, label, icon }) => (
           <NavLink
             key={to}
             to={to}
-            className="group flex items-center gap-3 px-2 py-1 rounded-md transition"
           >
-            {({ isActive }) => (
-              <>
-                <span
-                  className={`material-symbols-outlined nav-item-icon text-lg transition group-hover:text-blue-primary ${
-                    isActive ? "text-blue-primary" : "text-secondary-gray"
-                  }`}
+            {({ isActive }) => {
+              const isHovered = hovered !== null;
+              const isThisHovered = hovered === to;
+
+              const iconClass =
+                isActive && (!isHovered || isThisHovered)
+                  ? "text-blue-primary"
+                  : "text-secondary-gray group-hover:text-blue-primary";
+
+              const labelClass =
+                isActive && (!isHovered || isThisHovered)
+                  ? "text-primary"
+                  : "text-secondary-gray group-hover:text-primary";
+
+              return (
+                <div
+                  className="group flex items-center gap-3 px-2 py-1 rounded-md transition cursor-pointer"
+                  onMouseEnter={() => setHovered(to)}
+                  onMouseLeave={() => setHovered(null)}
                 >
-                  {icon}
-                </span>
-                <span
-                  className={`nav-item-info text-sm font-medium transition group-hover:text-primary ${
-                    isActive ? "text-primary" : "text-secondary-gray"
-                  }`}
-                >
-                  {label}
-                </span>
-              </>
-            )}
+                  <span className={`material-symbols-outlined nav-item-icon text-lg transition ${iconClass}`}>
+                    {icon}
+                  </span>
+                  <span className={`nav-item-info text-sm font-medium transition ${labelClass}`}>
+                    {label}
+                  </span>
+                </div>
+              );
+            }}
           </NavLink>
         ))}
       </div>
@@ -51,3 +66,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
