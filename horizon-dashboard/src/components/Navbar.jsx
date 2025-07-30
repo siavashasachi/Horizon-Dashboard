@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import UpgradeCard from "./cards/UpgradeCard";
 
 function Navbar() {
   const [hovered, setHovered] = useState(null);
@@ -13,8 +14,9 @@ function Navbar() {
   ];
 
   return (
-    <nav className="h-screen w-64 bg-white shadow-sm flex flex-col">
-      {/* Logo */}
+    <nav className="h-screen w-64 bg-white shadow-sm flex flex-col ">
+      
+        {/* Logo */}
       <div className="flex items-center justify-center text-3xl border-b border-light px-6 py-10">
         <h2 className="flex items-center gap-1 text-primary">
           <span className="font-bold">HORIZON</span>
@@ -22,8 +24,9 @@ function Navbar() {
         </h2>
       </div>
 
-      {/* Nav Items */}
-      <div className="mt-12 flex flex-col gap-6 text-sm font-medium pl-6">
+     <div className="flex flex-col justify-between py-10">
+       {/* Nav Items */}
+      <div className=" flex flex-col gap-6 text-sm font-medium  pl-6">
         {navItems.map(({ to, label, icon }) => (
           <NavLink key={to} to={to}>
             {({ isActive }) => {
@@ -66,6 +69,11 @@ function Navbar() {
           </NavLink>
         ))}
       </div>
+      
+      <div>
+        <UpgradeCard/>
+      </div>
+     </div>
     </nav>
   );
 }
