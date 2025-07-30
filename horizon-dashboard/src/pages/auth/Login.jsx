@@ -44,7 +44,7 @@ function Login() {
   return (
     <div className="flex h-screen justify-center overflow-y-auto">
       {/* Left Side - Login Form */}
-      <div className="w-full lg:w-1/2  flex flex-col justify-center items-center p-8">
+      <div className="w-full w-1  lg:w-1/2  flex flex-col justify-start lg:justify-center items-center p-8">
         <div className="w-full max-w-md px-4">
           <h2 className="text-3xl font-bold mb-2 text-primary">Sign In</h2>
           <p className="mb-2 text-secondary-gray">Enter your email and password to sign in!</p>
@@ -108,7 +108,7 @@ function Login() {
 
       {/* Right Side - Image */}
       <div
-        className="w-full md:w-1/2 flex flex-col justify-center items-center bg-cover bg-center rounded-bl-login"
+        className="w-full hidden lg:flex lg:w-1/2 flex flex-col justify-center items-center bg-cover bg-center rounded-bl-login"
         style={{ backgroundImage: `url(${loginBg})` }}
       >
         <div className="flex items-center justify-center flex-col gap-14">
