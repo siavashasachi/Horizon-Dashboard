@@ -14,7 +14,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="h-[1152px] w-64 bg-white shadow-sm flex flex-col ">
+    <nav className="h-[1152px] w-64 bg-white  flex flex-col ">
       
         {/* Logo */}
       <div className="flex items-center justify-center text-3xl border-b border-light px-6 py-10">

@@ -4,7 +4,7 @@ import Sidebar from '@components/Sidebar';
 import Footer from '@components/Footer';
 function DashboardLayout() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen bg-body">
       <Sidebar />
       <div className="flex flex-col flex-1">
         <Navbar />
