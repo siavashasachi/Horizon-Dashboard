@@ -8,8 +8,8 @@ function DashboardLayout() {
     <div className=" min-h-screen">
       <div className="flex ">
         <Navbar />
-        <main className="w-full relative  pt-10">
-          <div className='main-header flex flex-row justify-between '>
+        <main className=" relative w-full pt-10 ">
+          <div className='main-header flex flex-row justify-between px-4'>
             <BreadCrumb/>
             <ToolBar/>
           </div>

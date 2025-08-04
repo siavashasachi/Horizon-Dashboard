@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -13,6 +10,7 @@
   --color-primary: #2B3674;
   --color-secondary:#707EAE;
   --color-secondary-gray: #A3AED0;
+  --color-secondary-light:#E3DAFF;
   --color-blue-primary: #4318FF;
   --color-google-btn: #F4F7FE;
   --color-light: #E0E5F2;
@@ -25,8 +23,13 @@
   --bottom-left-radius-login:30%;
   
   --font-weight-main-bold:700;
+
+  
 }
 @layer utilities {
+  .bg-adv-card{
+   background-image:  url('/src/assets/images/backgrounds/Products2.png');
+  }
   .rounded-bl-login {
     border-bottom-left-radius: var(--bottom-left-radius-login);
   }
