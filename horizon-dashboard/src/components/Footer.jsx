@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <footer
-      className={`  w-full px-4 py-4 flex flex-col md:flex-row items-center text-secondary-gray 
+      className={`absolute bottom-0  w-full justify-between px-4 py-4 flex flex-col md:flex-row items-center text-secondary-gray 
         ${isLogin ? 'justify-around' : 'justify-between'}`}
     >
       <span>

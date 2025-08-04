@@ -1,17 +1,22 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from '@components/Navbar';
-import Sidebar from '@components/Sidebar';
 import Footer from '@components/Footer';
+import BreadCrumb from '@components/Breadcrumbs';
+import ToolBar from '../components/ToolBar';
 function DashboardLayout() {
   return (
-    <div className="flex min-h-screen bg-body">
-      <Sidebar />
-      <div className="flex flex-col flex-1">
+    <div className=" min-h-screen">
+      <div className="flex ">
         <Navbar />
-        <main className="flex-grow p-4">
+        <main className="w-full relative  pt-10">
+          <div className='main-header flex flex-row justify-between '>
+            <BreadCrumb/>
+            <ToolBar/>
+          </div>
           <Outlet />
+          <Footer />
         </main>
-        <Footer />
+        
       </div>
     </div>
   );

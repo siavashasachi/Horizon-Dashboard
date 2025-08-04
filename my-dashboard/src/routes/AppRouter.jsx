@@ -14,7 +14,7 @@ function AppRouter(){
                 <Route path="/signin" element={<SignIn/>}/>
             </Route>
             <Route element={<PanelLayout/>}>
-                <Route path="/dashboard" element={<MainDashboard/>}/>
+                <Route path="/" element={<MainDashboard/>}/>
                 <Route path="/kanban" element={<Kanban/>}/>
                 <Route path="/marketplace" element={<NftMarket/>}/>
                 <Route path="/profile" element={<Profile/>}/>
@@ -23,3 +23,4 @@ function AppRouter(){
         </Routes>
     )
 }
+export default AppRouter

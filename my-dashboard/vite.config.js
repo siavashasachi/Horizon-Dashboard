@@ -6,14 +6,14 @@ import path from "path";
 export default defineConfig({
   plugins: [react(), tailwindcss(),
   ],
-  resolve: {
+   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      '@': path.resolve(__dirname, './src'),
       '@components': path.resolve(__dirname, './src/components'),
       '@layouts': path.resolve(__dirname, './src/layouts'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@routes': path.resolve(__dirname, './src/routes'),
       '@assets': path.resolve(__dirname, './src/assets'),
-    }
+    },
   },
 })
