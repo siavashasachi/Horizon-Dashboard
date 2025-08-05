@@ -53,3 +53,8 @@
   }
 }
 
+/* making hover on mouse efects */
+
+#AdvBtn2:hover ~ #AdvBgBtn{
+  left: 130px;
+}
