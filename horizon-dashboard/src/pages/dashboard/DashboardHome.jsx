@@ -1,4 +1,7 @@
-import StatusCard from "../../components/dashboard/StatusCard";
+import BasicLineChart from "@components/dashboard/BasicLineChart";
+import StatusCard from "@components/dashboard/StatusCard";
+import TotalSpentCard from "../../components/dashboard/TotalSpentCard";
+import WeeklyCard from "../../components/dashboard/WeeklyCard";
 
 function DashboardHome() {
   return (
@@ -7,10 +10,10 @@ function DashboardHome() {
         <StatusCard/>
       </div>
       <div className="">
-        
+        <TotalSpentCard/>
       </div>
       <div className="">
-        
+        <WeeklyCard/>
       </div>
     </div>
   );
