@@ -1,5 +1,5 @@
 import Chart from "react-apexcharts";
-const TrafficChart = () => {
+const MyPieChart = () => {
   const options = {
     chart: {
       width: '100%',
