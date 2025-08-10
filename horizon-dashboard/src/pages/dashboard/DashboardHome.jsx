@@ -5,6 +5,7 @@ import WeeklyCard from "../../components/dashboard/WeeklyCard";
 import CheckTable from "../../components/dashboard/CheckTableCard";
 import DailyTrafficCard from "../../components/dashboard/DailyTrafficCard";
 import MyPieCard from "../../components/dashboard/MyPieCard";
+import ComplexTable from "../../components/dashboard/ComplexTable";
 
 function DashboardHome() {
   return (
@@ -26,9 +27,10 @@ function DashboardHome() {
         <MyPieCard/>
       </div>
       <div>
-
+<ComplexTable/>
       </div>
       <div>
+        
         <div className="grid grid-cols-2 gap-3">
         
       </div>

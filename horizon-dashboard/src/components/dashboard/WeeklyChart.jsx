@@ -1,30 +1,71 @@
-import { BarChart, Bar, XAxis } from 'recharts';
+import { useEffect, useRef } from 'react';
+import ApexCharts from 'apexcharts';
 
-const WeeklyChart = () => {
+function WeeklyChart() {
+  const chartRef = useRef(null);
+  let chart = useRef(null);
 
-    // Sample data
-    const data = [
-        { name: '17', x: 12, y: 23, z: 54 },
-        { name: '18', x: 22, y: 3, z: 24 },
-        { name: '19', x: 13, y: 15, z: 32 },
-        { name: '20', x: 44, y: 35, z: 23 },
-        { name: '21', x: 35, y: 45, z: 20 },
-        { name: '22', x: 62, y: 25, z: 29 },
-        { name: '23', x: 37, y: 17, z: 61 },
-        { name: '24', x: 28, y: 32, z: 45 },
-    ];
+  useEffect(() => {
+    const options = {
+      chart: {
+        type: 'bar',
+        toolbar: { show: false },
+          stacked: true,
+        height: "200px"
+  
+      },
+       
+  plotOptions:{ bar: {
+      columnWidth: '25%' // Adjust bar width here
+      ,
+      horizontal: false,
+      borderRadius: 5,
+          borderRadiusApplication: 'end',
+          borderRadiusWhenStacked: '',
+    },
+},
+      series: [
+        {
+          name: 'sales',
+          data: [20, 70, 145, 200, 49, 60, 70, 250]
+        },
+        {
+          name: 'sales2',
+          data: [50, 90, 185, 100, 249, 160, 70, 150]
+        },
+        {
+          name: 'sales3',
+          data: [50, 20, 25, 150, 300, 160, 70, 150]
+        }
+      ],
+      colors: ['#6AD2FF', '#775FFC',"#E6EDF9"],
+      dataLabels : {
+        enabled:false,
+      },
+      xaxis: {
+        categories: ['17', '18', '19', '20', '21', '22', '23','24'],
 
-    return (
-        <BarChart width={500} height={250} data={data} barGap={10}  >
-            
-            <XAxis dataKey="name" axisLine={false} tickLine={false} />
-            <Bar barSize={16} dataKey="y" stackId="a" fill="#6AD2FF" />
-            <Bar barSize={16} dataKey="z" stackId="a" fill="#775FFC" />
-            <Bar radius={[10,10,0,0]} barSize={16} dataKey="x" stackId="a" fill="#E6EDF9" />
-            
-            
-        </BarChart>
-    );
+        axisBorder: { show: false },
+        axisTicks: { show: false },
+      },
+      yaxis: { show: false },
+      grid: { show: false },
+
+      tooltip: { enabled: false }
+    };
+
+    chart.current = new ApexCharts(chartRef.current, options);
+    chart.current.render();
+
+    // Cleanup on unmount
+    return () => {
+      if (chart.current) {
+        chart.current.destroy();
+      }
+    };
+  }, []);
+
+  return <div ref={chartRef} id="chart0" />;
 }
 
 export default WeeklyChart;

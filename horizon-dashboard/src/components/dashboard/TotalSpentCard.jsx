@@ -4,7 +4,7 @@ import MonthToggle from "../common/MonthToggle"
 import BasicLineChart from "./BasicLineChart";
 function TotalSpentCard() {
     return (
-        <div className="bg-white rounded-secondary p-4  h-full">
+        <div className="bg-white rounded-secondary p-4  ">
             <div className="flex items-center justify-between">
                 <MonthToggle />
                 <ChartBtn />

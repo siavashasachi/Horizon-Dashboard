@@ -7,12 +7,22 @@ function TrafficChart() {
 
     useEffect(() => {
         const options = {
+            plotOptions: {
+                bar: {
+                    columnWidth: '40%' // Adjust bar width here
+                    ,
+                    horizontal: false,
+                    borderRadius: 7,
+                    borderRadiusApplication: 'end',
+                    borderRadiusWhenStacked: '',
+                },
+            },
             chart: {
                 type: 'bar',
                 toolbar: { show: false },
             },
-            dataLabels:{
-                enabled:false,
+            dataLabels: {
+                enabled: false,
             },
             series: [
                 {
@@ -21,7 +31,19 @@ function TrafficChart() {
                 },
 
             ],
-            
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'light',
+                    type: 'vertical',
+                    shadeIntensity: 1.5,
+                    gradientToColors: ['#4318FF', '#4318FF',],
+
+                    opacityFrom: 1,
+                    opacityTo: 0.35,
+                    stops: [0, 90, 100]
+                }
+            },
 
 
             xaxis: {
@@ -30,12 +52,12 @@ function TrafficChart() {
                 axisBorder: { show: false },
                 axisTicks: { show: false },
                 style: {
-              colors: ['#A3AED0'],
-          },
+                    colors: ['#A3AED0'],
+                },
             },
             yaxis: { show: false },
             grid: { show: false },
-            stroke: { curve: 'smooth', width: 3, },
+
             tooltip: { enabled: false }
         };
 
