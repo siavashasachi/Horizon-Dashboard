@@ -29,7 +29,7 @@ function StatusCard() {
         cards.map(
             (data) => {
                 return (
-                    <div className="flex items-center gap-4 ps-5 py-4 bg-white w-100 max-w-[220px] h-[80px] rounded-secondary">
+                    <div className="flex items-center gap-4 ps-5 py-4 bg-white w-100  h-[80px] rounded-secondary">
                         <div className="rounded-full flex justify-center items-center bg-body w-[50px] h-[50px]">E</div>
                         <div className="flex flex-col">
                             <span className="text-sm text-secondary-gray">{data.info}</span>

@@ -3,7 +3,7 @@ import TrafficChart from "./TrafficChart"
 
 function DailyTrafficCard() {
     return (
-        <div className="bg-white rounded-secondary p-4">
+        <div className="bg-white rounded-secondary p-4 flex flex-col justify-between">
             <div className="flex justify-between items-center">
                 <div className="flex flex-col">
                     <h4 className=" text-sm text-secondary-gray">Daily Traffic</h4>

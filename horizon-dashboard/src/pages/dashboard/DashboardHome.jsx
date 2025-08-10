@@ -4,11 +4,12 @@ import TotalSpentCard from "../../components/dashboard/TotalSpentCard";
 import WeeklyCard from "../../components/dashboard/WeeklyCard";
 import CheckTable from "../../components/dashboard/CheckTableCard";
 import DailyTrafficCard from "../../components/dashboard/DailyTrafficCard";
+import MyPieCard from "../../components/dashboard/MyPieCard";
 
 function DashboardHome() {
   return (
-    <div className="grid grid-cols-2 gap-3 p-4">
-      <div className="col-span-2 flex items-center gap-3">
+    <div className="grid grid-cols-2 grid-rows-4  gap-3 p-4 ">
+      <div className="col-span-2 flex items-center gap-3 row-end-1">
         <StatusCard/>
       </div>
       <div className="">
@@ -20,8 +21,17 @@ function DashboardHome() {
       <div>
         <CheckTable/>
       </div>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-3">
         <DailyTrafficCard/>
+        <MyPieCard/>
+      </div>
+      <div>
+
+      </div>
+      <div>
+        <div className="grid grid-cols-2 gap-3">
+        
+      </div>
       </div>
     </div>
   );

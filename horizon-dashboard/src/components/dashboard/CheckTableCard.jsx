@@ -17,7 +17,7 @@ function CheckTable() {
         }
     ]
     return (
-        <div className="bg-white p-4 rounded-primary ">
+        <div className="bg-white p-4 rounded-primary h-full ">
 
             <div className="mb-3 flex items-center justify-between">
                 <MainHeader text={'Check Table'} />
