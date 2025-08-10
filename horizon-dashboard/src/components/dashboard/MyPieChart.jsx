@@ -1,40 +1,23 @@
-import { useEffect, useRef } from 'react';
-import ApexCharts from 'apexcharts';
-
-function MyPieChart() {
-  const chartRef = useRef(null);
-  let chart = useRef(null);
-
-  useEffect(() => {
-    const options = {
-      chart: {
-                width: 250,
-                type: 'pie',
-              },
-               series: [44, 55,],
-        fill:{
-            colors:['#4318FF','#6AD2FF']
-        },
-        legend: {
-            show:false,
-        },
-        dataLabels: {
-            enabled:false,
-        }
-    };
-
-    chart.current = new ApexCharts(chartRef.current, options);
-    chart.current.render();
-
-    // Cleanup on unmount
-    return () => {
-      if (chart.current) {
-        chart.current.destroy();
-      }
-    };
-  }, []);
-
-  return <div ref={chartRef} id="chart3" />;
-}
-
+import Chart from "react-apexcharts";
+const TrafficChart = () => {
+  const options = {
+    chart: {
+      width: '100%',
+      height: '100%',
+      type: 'pie',
+    },
+    series: [44, 55,],
+    fill: {
+      colors: ['#4318FF', '#6AD2FF']
+    },
+    legend: {
+      show: false,
+    },
+    dataLabels: {
+      enabled: false,
+    }
+  };
+  const series = [44, 55,];
+  return <Chart options={options} series={series} type="pie" />;
+};
 export default MyPieChart;
