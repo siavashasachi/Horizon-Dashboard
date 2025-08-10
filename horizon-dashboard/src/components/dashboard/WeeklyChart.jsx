@@ -21,7 +21,9 @@ const WeeklyChart = () => {
         borderRadiusWhenStacked: '',
       },
     },
-
+    legend: {
+      show:false
+    },
     colors: ['#6AD2FF', '#775FFC', "#E6EDF9"],
     dataLabels: {
       enabled: false,

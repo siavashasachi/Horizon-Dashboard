@@ -9,7 +9,9 @@ const BasicLineChart = () => {
     },
 
     colors: ['#6AD2FF', '#775FFC'],
-
+    legend: {
+      show: false
+    },
     xaxis: {
       categories: ['Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
       max: 6,
