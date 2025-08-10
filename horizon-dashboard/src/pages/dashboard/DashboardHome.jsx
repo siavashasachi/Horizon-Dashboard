@@ -9,14 +9,14 @@ import ComplexTable from "../../components/dashboard/ComplexTable";
 import TaskCard from '@components/dashboard/TaskCard';
 function DashboardHome() {
   return (
-    <div className="grid grid-cols-2 grid-rows-4  gap-3 p-4 ">
+    <div className="grid grid-cols-2 grid-rows-[repeat(13,130px)]  gap-3 p-4 ">
       <div className="col-span-2 flex items-center gap-3 row-end-1">
         <StatusCard />
       </div>
-      <div className="">
+      <div className="row-span-3">
         <TotalSpentCard />
       </div>
-      <div className="">
+      <div className="row-span-3">
         <WeeklyCard />
       </div>
       <div>
