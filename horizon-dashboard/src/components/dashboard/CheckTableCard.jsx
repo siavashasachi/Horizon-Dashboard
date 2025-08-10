@@ -14,6 +14,24 @@ function CheckTable() {
             progress: '10%',
             quantity: '10141424',
             date: '25.Jan.2021'
+        },
+        {   id:'kit3',
+            name: 'Horizon UI Pro',
+            progress: '10%',
+            quantity: '10141424',
+            date: '25.Jan.2021'
+        },
+        {   id:'kit4',
+            name: 'Horizon UI Pro',
+            progress: '10%',
+            quantity: '10141424',
+            date: '25.Jan.2021'
+        },
+        {   id:'kit5',
+            name: 'Horizon UI Pro',
+            progress: '10%',
+            quantity: '10141424',
+            date: '25.Jan.2021'
         }
     ]
     return (
@@ -25,9 +43,9 @@ function CheckTable() {
             </div>
 
             <table className="w-full table-fixed border-spacing-3.5 text-sm">
-                <thead className="text-secondary-gray" >
+                <thead className="text-secondary-gray border-b-2 border-body" >
                     <tr className="">
-                        {tParentItems.map(d => <th className="text-left font-normal ">{d.info}</th>)}
+                        {tParentItems.map(d => <th className="text-left font-normal py-2">{d.info}</th>)}
                     </tr>
                 </thead>
                 <tbody>
