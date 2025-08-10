@@ -3,13 +3,13 @@ import Chart from "react-apexcharts";
 const WeeklyChart = () => {
   const options = {
     chart: {
-      type: 'bar',
-      toolbar: { show: false },
-      stacked: true,
-      width: '100%',
-      height: '100%',
-
-    },
+          type: 'bar',
+          height: '100%',
+          stacked: true,
+          toolbar: {
+            show: false
+          },
+        },
 
     plotOptions: {
       bar: {
@@ -22,7 +22,7 @@ const WeeklyChart = () => {
       },
     },
     legend: {
-      show:false
+      show: false
     },
     colors: ['#6AD2FF', '#775FFC', "#E6EDF9"],
     dataLabels: {
@@ -53,6 +53,6 @@ const WeeklyChart = () => {
       data: [50, 20, 25, 150, 300, 160, 70, 150]
     }
   ]
-  return <Chart options={options} series={series} type="bar" />;
+  return <Chart options={options} series={series} type="bar" height={'90%'} />;
 };
-export default WeeklyChart;
+export default WeeklyChart; 
