@@ -18,6 +18,7 @@ const BasicLineChart = () => {
       axisBorder: { show: false },
       axisTicks: { show: false },
     },
+    zoom:{enabled:false},   
     yaxis: { show: false },
     grid: { show: false },
     stroke: { curve: 'smooth', width: 5, },
@@ -33,6 +34,6 @@ const BasicLineChart = () => {
       data: [50, 20, 85, 100, 249, 160, 70, 150, 225]
     }
   ];
-  return <Chart options={options} series={series} type="line" />;
+  return <Chart options={options} series={series} height={'300px '}  type="line" />;
 };
 export default BasicLineChart;

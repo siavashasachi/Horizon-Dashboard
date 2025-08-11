@@ -9,8 +9,8 @@ function TotalSpentCard() {
                 <MonthToggle />
                 <ChartBtn />
             </div>
-            <div className="grid grid-cols-6  gap-3">
-                <div className="flex flex-col col-span-2">
+            <div className="grid grid-cols-6   gap-3">
+                <div className="flex flex-col col-span-2 ">
                     <div className="text-primary text-2xl font-main-bold">
                         $37
                     </div>
@@ -24,7 +24,7 @@ function TotalSpentCard() {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-4"><BasicLineChart/></div>
+                <div className="col-span-4 w-full"><BasicLineChart/></div>
             </div>
         </div>
     )
